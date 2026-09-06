@@ -55,33 +55,10 @@ tabs.forEach((tab, index) => {
   });
 });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector("#main-menu");
-
-function closeMenu() {
-  menuToggle?.setAttribute("aria-expanded", "false");
-  menu?.classList.remove("is-open");
-  document.body.classList.remove("menu-open");
-}
-
-menuToggle?.addEventListener("click", () => {
-  const open = menuToggle.getAttribute("aria-expanded") !== "true";
-  menuToggle.setAttribute("aria-expanded", String(open));
-  menu?.classList.toggle("is-open", open);
-  document.body.classList.toggle("menu-open", open);
-});
-
 document.querySelectorAll("[data-tab-target]").forEach((link) => {
   link.addEventListener("click", () => {
     activateTab(link.dataset.tabTarget);
-    closeMenu();
   });
-});
-
-menu?.querySelectorAll("a:not([data-tab-target])").forEach((link) => link.addEventListener("click", closeMenu));
-
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 1100) closeMenu();
 });
 
 // Add future campaign images here after placing the files in assets/.

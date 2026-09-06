@@ -14,14 +14,10 @@
 
 <header class="site-header">
   <a class="brand" href="#top" aria-label="Redd Fremmedspråkene - til toppen"><span class="brand-mark" aria-hidden="true"><img src="assets/favicon.svg" alt=""></span><span>Redd Fremmedspråkene</span></a>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span><span class="sr-only">Åpne meny</span></button>
   <nav id="main-menu" aria-label="Hovedmeny">
     <a href="#om-oss">Hvem er vi?</a>
-    <a href="#utforsk" data-tab-target="innspill">Send innspill</a>
-    <a href="#utforsk" data-tab-target="bakgrunn">Bakgrunn</a>
-    <a href="#utforsk" data-tab-target="argumenter">Argumenter</a>
-    <a href="#utforsk" data-tab-target="stottespillere">Støttespillere</a>
-    <a href="#utforsk" data-tab-target="aktiviteter">Aktiviteter</a>
+    <a href="#panel-innspill" data-tab-target="innspill">Innspill</a>
+    <a href="#krav">Krav</a>
   </nav>
 </header>
 
@@ -44,6 +40,7 @@
       <a class="button button-primary" href="https://hoering.udir.no/hoering/3890" target="_blank" rel="noreferrer">Send ditt innspill <span aria-hidden="true">↗</span></a>
       <a class="button button-secondary" href="https://www.hiof.no/fss/om/aktuelt/arrangementer/" target="_blank" rel="noreferrer">Finn et åpent møte <span aria-hidden="true">↗</span></a>
       <a class="button button-secondary" href="https://www.opprop.net/behold_fremmedsprak_i_videregaende_opplaring" target="_blank" rel="noreferrer">Signer oppropet <span aria-hidden="true">↗</span></a>
+              <a class="button button-secondary" href="#panel-argumenter" data-tab-target="argumenter">Se argumenter <span aria-hidden="true">↓</span></a>
     </div>
   </section>
 
@@ -58,7 +55,7 @@
   <section class="explorer" id="utforsk" aria-labelledby="explorer-title">
     <div class="explorer-heading">
       <div><p class="section-label">Finn det du trenger</p><h2 id="explorer-title">Fem veier inn i saken</h2></div>
-  
+      <p>Velg et område. Du kan bytte uten å bla gjennom hele siden.</p>
     </div>
 
     <div class="tab-list" role="tablist" aria-label="Kampanjeinnhold">
@@ -87,7 +84,43 @@
 
       <section class="tab-panel" id="panel-argumenter" role="tabpanel" aria-labelledby="tab-argumenter" data-panel="argumenter" hidden>
         <div class="panel-intro"><p class="section-label">Argumenter</p><h3>Engelsk er ikke nok.<br><em>KI er ikke forståelse.</em></h3><p>Språkkompetanse handler om mer enn å oversette ord. Det handler om tillit, perspektiv og evnen til å samarbeide.</p></div>
-        <div><div class="reason-grid"><article><b>01</b><h4>Beredskap</h4><p>Norge trenger mennesker som kan forstå og samarbeide med Europa og resten av verden.</p></article><article><b>02</b><h4>Arbeidsliv</h4><p>Handel, diplomati, reiseliv og forskning bygger på språkkompetanse og tillit.</p></article><article><b>03</b><h4>Demokrati</h4><p>Språk gir tilgang til andre perspektiver, kilder og samfunn.</p></article><article><b>04</b><h4>Lik tilgang</h4><p>Postnummeret skal ikke avgjøre hvilke språk en elev får lære.</p></article></div><p class="coming-note">Utfyllende argumenter og tekstbausteiner publiseres her etter hvert.</p></div>
+        <div><div class="reason-grid"><article><b>01</b><h4>Beredskap</h4><p>Norge trenger mennesker som kan forstå og samarbeide med Europa og resten av verden.</p></article><article><b>02</b><h4>Arbeidsliv</h4><p>Handel, diplomati, reiseliv og forskning bygger på språkkompetanse og tillit.</p></article><article><b>03</b><h4>Demokrati</h4><p>Språk gir tilgang til andre perspektiver, kilder og samfunn.</p></article><article><b>04</b><h4>Lik tilgang</h4><p>Postnummeret skal ikke avgjøre hvilke språk en elev får lære.</p></article></div></div>
+
+        <div class="argument-library" id="argumentbank">
+          <p class="section-label">Argumentbank</p>
+          <details class="argument-drawer">
+            <summary><span>Hvorfor fremmedspråk angår alle</span><small>9 argumenter</small></summary>
+            <div class="argument-body">
+              <p class="argument-intro">Fremmedspråk er ikke bare et fag for spesielt interesserte. Det gir elever kunnskap og ferdigheter de kan bruke i utdanning, arbeidsliv og samfunnsliv.</p>
+              <ol class="argument-list">
+                <li><h4>Et praktisk og relevant fag</h4><p>Den praktiske tilnærmingen har vært en del av læreplanen og undervisningsmetodene i 20 år. Hvis noen elever ikke oppfatter faget som praktisk og relevant, bør ikke faget svekkes. Lærerne bør heller styrkes gjennom faglig utvikling.</p></li>
+                <li><h4>Språkbevissthet og livslang læring</h4><p>Fremmedspråkopplæring utvikler språkbevissthet og kan ha positiv innvirkning på norsk og engelsk. Læringsstrategiene elevene tilegner seg, kan brukes gjennom hele livet for å lære nye språk.</p></li>
+                <li><h4>Internasjonal forståelse og samarbeid</h4><p>Norge er et lite, men betydningsfullt land i en stadig mer global og urolig verden. Høyere utdanning, forskning, næringsliv, diplomati og kulturutveksling trenger mennesker som behersker flere språk enn norsk og engelsk.</p></li>
+                <li><h4>Dannelse og demokrati</h4><p>Språk gir innsikt i samfunn, historie og kultur. Faget bidrar til demokratisk forståelse og interkulturell kompetanse, og gir dypere innsikt i politiske og sosiale prosesser både globalt og i Norge.</p></li>
+                <li><h4>Forberedelse til en global virkelighet</h4><p>Videregående opplæring må forberede morgendagens studenter og arbeidstakere. Kunnskapen og erfaringen fra språkopplæringen er viktig for å løse framtidige utfordringer og støtter mål innen utdannings-, utenriks- og næringslivspolitikk.</p></li>
+                <li><h4>Jobbmuligheter og lik tilgang</h4><p>Fremmedspråk kan være avgjørende for framtidige jobbmuligheter. Tilbudet må ikke avhenge av om eleven går på en stor skole i en stor by eller en liten skole i distriktet. Et fag som ikke tilbys, er ikke et reelt valg.</p></li>
+                <li><h4>Forberedelse til høyere utdanning</h4><p>Faget trener læringsstrategier, logikk, disiplin, utholdenhet og kritisk og systematisk tenkning. Dette er ferdigheter framtidige studenter og samfunnsborgere trenger.</p></li>
+                <li><h4>Muligheten til å studere ute</h4><p>Språkkompetanse er en viktig forutsetning for at flere skal kunne studere i utlandet. Mange attraktive og rimelige studier krever dokumenterte språkkunnskaper.</p></li>
+                <li><h4>Mer språk styrker Norge</h4><p>Løsningen er mer språk i videregående opplæring. Norske myndigheter må anerkjenne fremmedspråk som en viktig del av studentmobilitet, internasjonalt samarbeid og norsk konkurransekraft.</p></li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="argument-drawer">
+            <summary><span>Hva står på spill i KLAR2030?</span><small>6 argumenter</small></summary>
+            <div class="argument-body">
+              <p class="argument-intro">Å gjøre fremmedspråk til valgfag kan få konsekvenser langt utover det enkelte fagvalget.</p>
+              <ol class="argument-list">
+                <li><h4>Like muligheter</h4><p>Alle elever bør få mulighet til å lære et fremmedspråk. Når små skoler ikke har råd til å opprette små språkgrupper, rammes elever i distriktene hardest. Da forsvinner valget også for dem som ønsker faget.</p></li>
+                <li><h4>Urettferdig konkurranse mellom fag</h4><p>Elever på studieforberedende søker ofte best mulig karaktergjennomsnitt. Arbeidskrevende fag med langsiktig verdi kan tape mot fag der gode karakterer eller bonuspoeng oppleves lettere tilgjengelige. Fag som velges sjelden, risikerer å forsvinne.</p></li>
+                <li><h4>En sårbar plassering</h4><p>Retningen «Kommunikasjon, media og språk» kan bli oppfattet som en videreføring av medier og kommunikasjon. Da kan den primært tilbys ved skoler som allerede har lærere og infrastruktur, mens andre skoler kan slutte å tilby fremmedspråk.</p></li>
+                <li><h4>Valg på tvers fungerer ikke alltid i praksis</h4><p>Et valg på tvers krever at språket faktisk tilbys, at nok elever velger samme språk, og at det passer i timeplanen. Slike valg er allerede teoretisk mulige i dag, men lar seg ofte ikke gjennomføre av organisatoriske grunner.</p></li>
+                <li><h4>Et uklart datagrunnlag</h4><p>Udir skriver at kunnskapsgrunnlaget ikke peker på at fremmedspråk bør være felles for alle som ønsker studiekompetanse. Det er uklart hvilke data denne konklusjonen bygger på. <a href="https://www.udir.no/tall-og-forskning/statistikk/statistikk-videregaende-skole/karakterer-vgs/" target="_blank" rel="noreferrer">Karakterstatistikken publisert av Udir <span aria-hidden="true">↗</span></a> viser at de fleste elever oppnår middels til gode resultater i fremmedspråk.</p></li>
+                <li><h4>Manglende konsekvensutredning</h4><p>Før en endring må konsekvensene utredes for språkkompetansen i Norge, tilbudet i skolen og høyere utdanning, og elevers og studenters like muligheter på mellomlang og lang sikt.</p></li>
+              </ol>
+            </div>
+          </details>
+        </div>
       </section>
 
       <section class="tab-panel" id="panel-stottespillere" role="tabpanel" aria-labelledby="tab-stottespillere" data-panel="stottespillere" hidden>
@@ -108,7 +141,7 @@
   </section>
 
   <section class="about" id="om-oss">
-    <div class="about-heading"><p class="section-label">Hvem er vi?</p><h2>Tre lærerforeninger.<br>Én felles sak.</h2><p>Fremmedspråk er en felles kampanje fra de tre nasjonale lærerforeningene for tysk, spansk og fransk. Sammen arbeider vi for å sikre fremmedspråk en tydelig, tilgjengelig og forutsigbar plass i norsk skole.</p></div>
+    <div class="about-heading"><p class="section-label">Hvem er vi?</p><h2><span class="about-title-line">Tre lærerforeninger.</span><br>Én felles sak.</h2><p>Fremmedspråk er en felles kampanje fra de tre nasjonale lærerforeningene for tysk, spansk og fransk. Sammen arbeider vi for å sikre fremmedspråk en tydelig, tilgjengelig og forutsigbar plass i norsk skole.</p></div>
     <div class="association-grid" aria-label="Foreningene bak kampanjen">
       <article><div class="logo-frame logo-wide"><img src="assets/tyskforum-logo.png" alt="Tyskforum – Norsk Tysklærerforening" width="2400" height="619"></div><h3>TYSKFORUM</h3><p>Norsk Tysklærerforening</p></article>
       <article><div class="logo-frame logo-wide"><img src="assets/anpe-logo.jpg" alt="ANPE Norge – Den norske spansklærerforeningen" width="395" height="140"></div><h3>ANPE</h3><p>Den norske spansklærerforeningen</p></article>
