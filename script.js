@@ -83,3 +83,100 @@ menu?.querySelectorAll("a:not([data-tab-target])").forEach((link) => link.addEve
 window.addEventListener("resize", () => {
   if (window.innerWidth > 1100) closeMenu();
 });
+
+// Add future campaign images here after placing the files in assets/.
+// Example: { src: "assets/hero-1.jpg", alt: "Elever i språkundervisning", caption: "Valgfri bildetekst" }
+const heroImages = [
+  {
+    src: "assets/markus-spiske-AAz715reF9s-unsplash.jpg",
+    alt: "Elever som arbeider sammen i en språktime",
+    caption: "Bilde av Markus Spiske på Unsplash"
+  },
+  {
+    src: "assets/danique-veldhuis-ELJwt70SQtM-unsplash.jpg",
+    alt: "Sagrada Familia i Barcelona",
+    caption: "Bilde av Danique Veldhuis på Unsplash"
+  },
+  {
+    src: "assets/tomas-nozina-nwT0Y-NaQ4Y-unsplash.jpg",
+    alt: "Louvre i Paris",
+    caption: "Bilde av Tomáš Nožina på Unsplash"
+  }
+];
+
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  heroImages.forEach(({ src, alt, caption = "" }) => {
+    const slide = document.createElement("figure");
+    slide.className = "hero-slide hero-image-slide";
+    slide.dataset.slide = "";
+    slide.hidden = true;
+    const image = document.createElement("img");
+    image.src = src;
+    image.alt = alt;
+    slide.append(image);
+    if (caption) {
+      const figcaption = document.createElement("figcaption");
+      figcaption.textContent = caption;
+      slide.append(figcaption);
+    }
+    carousel.insertBefore(slide, carousel.querySelector(".carousel-controls"));
+  });
+
+  const slides = [...carousel.querySelectorAll("[data-slide]")];
+  const controls = carousel.querySelector(".carousel-controls");
+  const status = carousel.querySelector("[data-carousel-status]");
+  let activeIndex = 0;
+
+  function showSlide(index) {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      slide.hidden = slideIndex !== activeIndex;
+      slide.classList.toggle("is-active", slideIndex === activeIndex);
+    });
+    if (status) status.textContent = `${activeIndex + 1} / ${slides.length}`;
+  }
+
+  if (slides.length > 0) showSlide(0);
+
+  if (slides.length > 1) {
+    controls.hidden = false;
+
+    const delay = 5000;
+    let autoplay;
+
+    function stopAutoplay() {
+      window.clearInterval(autoplay);
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      autoplay = window.setInterval(() => {
+        showSlide(activeIndex + 1);
+      }, delay);
+    }
+
+    carousel.querySelector("[data-carousel-prev]")?.addEventListener("click", () => {
+      showSlide(activeIndex - 1);
+      startAutoplay();
+    });
+
+    carousel.querySelector("[data-carousel-next]")?.addEventListener("click", () => {
+      showSlide(activeIndex + 1);
+      startAutoplay();
+    });
+
+    carousel.addEventListener("mouseenter", stopAutoplay);
+    carousel.addEventListener("mouseleave", startAutoplay);
+    carousel.addEventListener("focusin", stopAutoplay);
+    carousel.addEventListener("focusout", startAutoplay);
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stopAutoplay();
+      else startAutoplay();
+    });
+
+    startAutoplay();
+  }
+});

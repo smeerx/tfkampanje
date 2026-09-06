@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Redd Fremmedspråkene</title>
+  <g fill="none" stroke-width="6" stroke-linecap="round">
+    <path d="M32 4a28 28 0 0 1 28 28" stroke="#e66b5b"/>
+    <path d="M60 32a28 28 0 0 1-28 28" stroke="#35b7a5"/>
+    <path d="M32 60A28 28 0 0 1 4 32" stroke="#5368c9"/>
+    <path d="M4 32A28 28 0 0 1 32 4" stroke="#f4bd3f"/>
+  </g>
+  <circle cx="32" cy="32" r="21.5" fill="#354b9b" stroke="#f7f6f2" stroke-width="2.5"/>
+  <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round">
+    <path d="M10.5 32h43"/>
+    <path d="M32 10.5c6.4 6 9.8 13.2 9.8 21.5S38.4 47.5 32 53.5C25.6 47.5 22.2 40.3 22.2 32S25.6 16.5 32 10.5Z"/>
+  </g>
+</svg>
