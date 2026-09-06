@@ -62,7 +62,7 @@ button {
   min-height:74px;
   padding:10px 3vw;
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   justify-content:space-between;
   gap:24px;
   background:rgba(247,246,242,.94);
@@ -95,7 +95,8 @@ nav {
   display:flex;
   align-items:center;
   justify-content:flex-end;
-  gap:clamp(18px,2.2vw,34px);
+  flex-wrap:wrap;
+  column-gap:clamp(18px,2.2vw,34px);
   font-size:14px;
   font-weight:700
 }
@@ -988,7 +989,8 @@ footer a:hover {
   .site-header nav {
     width:100%;
     justify-content:flex-end;
-    gap:clamp(18px,6vw,30px);
+    flex-wrap:wrap;
+    column-gap:clamp(18px,6vw,30px);
     font-size:13px
   }
   .site-header nav a {
