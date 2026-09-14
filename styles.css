@@ -647,10 +647,15 @@ h1 em,
 .reason-grid p,
 .voice-grid p,
 .activity-grid p {
-  margin:0;
+  margin:0 0 6px;
   color:var(--muted);
   font-size:14px;
   line-height:1.48
+}
+.reason-grid p:last-child,
+.voice-grid p:last-child,
+.activity-grid p:last-child {
+  margin:0;
 }
 .coming-note {
   margin:12px 2px 0;
@@ -672,8 +677,7 @@ h1 em,
   grid-template-columns:1fr 1fr;
   gap:12px
 }
-.activity-grid article,
-.activity-grid>a {
+.activity-grid>.card {
   padding:18px;
   display:grid;
   grid-template-columns:34px 1fr auto;
@@ -689,12 +693,11 @@ h1 em,
   transform:translateY(-2px);
   box-shadow:0 10px 24px rgba(28,38,67,.08)
 }
-.activity-grid>article>span,
-.activity-grid>a>span {
+.activity-grid>.card>span {
   color:var(--blue);
   font:700 12px ui-monospace,monospace
 }
-.activity-grid>a>i {
+.activity-grid>.card>i {
   color:var(--blue);
   font-style:normal
 }
@@ -702,11 +705,11 @@ h1 em,
   margin:0 0 7px;
   font-size:18px
 }
-.qr-card {
+.activity-grid>.card.qr-card {
   grid-column:1/-1;
   padding:16px;
   display:grid;
-  grid-template-columns:116px 1fr;
+  grid-template-columns:128px 1fr;
   gap:18px;
   align-items:center;
   background:#fff;
@@ -725,16 +728,14 @@ h1 em,
   margin:0 0 5px
 }
 .qr-card p:not(.section-label) {
-  margin:0 0 9px;
-  color:var(--muted);
   font-size:13px
 }
-.qr-downloads {
+.card .linkset {
   display:flex;
-  gap:14px;
+  gap:10px;
   flex-wrap:wrap
 }
-.qr-card a {
+.card a {
   color:var(--blue);
   font-size:14px;
   font-weight:800;
