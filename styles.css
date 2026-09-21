@@ -307,17 +307,20 @@ h1 em,
   box-shadow:0 10px 22px rgba(12,20,54,.2)
 }
 .language-day-preview {
-  width:45%;
-  height:88%;
+  width:38%;
+  max-width:250px;
+  height:68%;
+  max-height:510px;
   position:absolute;
-  right:-5%;
-  bottom:-13%;
+  right:-2%;
+  bottom:-7%;
   z-index:1;
   object-fit:cover;
   object-position:top center;
   border:10px solid rgba(255,255,255,.96);
   border-radius:12px;
   box-shadow:0 18px 45px rgba(13,22,63,.28);
+  opacity:.68;
   transform:rotate(4deg)
 }
 .hero-image-slide {
@@ -1126,16 +1129,22 @@ footer a:hover {
     padding:48px 28px
   }
   .language-day-copy {
-    width:74%;
-    padding:44px 28px
+    width:68%;
+    padding:40px 28px
   }
   .language-day-copy h2 {
-    font-size:clamp(44px,10vw,66px)
+    max-width:360px;
+    font-size:clamp(44px,8vw,60px)
+  }
+  .language-day-copy p {
+    max-width:350px
   }
   .language-day-preview {
-    width:46%;
-    right:-12%;
-    opacity:.72
+    width:32%;
+    max-width:none;
+    height:64%;
+    right:-3%;
+    bottom:-6%
   }
   .hero-image-slide {
     height:100%;
@@ -1228,6 +1237,25 @@ footer a:hover {
   footer>div {
     justify-content:flex-start;
     flex-wrap:wrap
+  }
+}
+@media(max-width:640px) {
+  .hero-language-day {
+    min-height:440px
+  }
+  .language-day-copy {
+    width:100%;
+    padding:34px 28px
+  }
+  .language-day-copy h2,
+  .language-day-copy p {
+    max-width:none
+  }
+  .language-day-copy h2 {
+    font-size:clamp(44px,12vw,58px)
+  }
+  .language-day-preview {
+    display:none
   }
 }
 
