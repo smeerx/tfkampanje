@@ -157,3 +157,39 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     startAutoplay();
   }
 });
+
+const materialItems = [...document.querySelectorAll("[data-material-item]")];
+const materialSearch = document.querySelector("[data-material-search]");
+const materialFilters = [...document.querySelectorAll("[data-material-filter]")];
+const materialCount = document.querySelector("[data-material-count]");
+const materialEmpty = document.querySelector("[data-material-empty]");
+let activeMaterialFilter = "alle";
+
+function filterMaterials() {
+  const query = materialSearch?.value.trim().toLocaleLowerCase("nb") ?? "";
+  let visible = 0;
+
+  materialItems.forEach((item) => {
+    const matchesCategory = activeMaterialFilter === "alle" || item.dataset.category === activeMaterialFilter;
+    const searchText = `${item.dataset.search ?? ""} ${item.textContent}`.toLocaleLowerCase("nb");
+    const matchesSearch = !query || searchText.includes(query);
+    item.hidden = !(matchesCategory && matchesSearch);
+    if (!item.hidden) visible += 1;
+  });
+
+  if (materialCount) materialCount.textContent = String(visible);
+  if (materialEmpty) materialEmpty.hidden = visible !== 0;
+}
+
+materialSearch?.addEventListener("input", filterMaterials);
+materialFilters.forEach((button) => {
+  button.addEventListener("click", () => {
+    activeMaterialFilter = button.dataset.materialFilter;
+    materialFilters.forEach((filter) => {
+      const active = filter === button;
+      filter.classList.toggle("is-active", active);
+      filter.setAttribute("aria-pressed", String(active));
+    });
+    filterMaterials();
+  });
+});

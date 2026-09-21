@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Last ned bilder, logoer og kampanjemateriell fra Redd Fremmedspråkene.">
+  <title>Materialer | Redd Fremmedspråkene</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="materials-page">
+<a class="skip-link" href="#main-content">Hopp til hovedinnhold</a>
+
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Redd Fremmedspråkene - forsiden"><span class="brand-mark" aria-hidden="true"><img src="assets/favicon.svg" alt=""></span><span>Redd Fremmedspråkene</span></a>
+  <nav aria-label="Hovedmeny">
+    <a href="index.html">Forsiden</a>
+    <a href="index.html#panel-innspill">Innspill</a>
+    <a href="materialer.html" aria-current="page">Materialer</a>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="materials-hero">
+    <div>
+      <p class="eyebrow">Kampanjebank</p>
+      <h1>Materialer til<br><em>fri bruk.</em></h1>
+    </div>
+    <p class="lead">Her finner du materiell du kan bruke for å gjøre kampanjen synlig i ditt nærmiljø.</p>
+  </section>
+
+  <section class="materials-library" aria-labelledby="library-title">
+    <div class="materials-toolbar">
+      <label class="material-search"><span class="sr-only">Søk i materialer</span><span aria-hidden="true">⌕</span><input type="search" placeholder="Søk i materialer" data-material-search></label>
+    </div>
+
+    <div class="material-filters" aria-label="Filtrer materialer">
+      <button type="button" class="is-active" data-material-filter="alle" aria-pressed="true">Alle</button>
+      <button type="button" data-material-filter="veggaviser" aria-pressed="false">Veggaviser</button>
+      <button type="button" data-material-filter="flyer" aria-pressed="false">Kampanjeflyer</button>
+      <button type="button" data-material-filter="qr-koder" aria-pressed="false">QR-koder</button>
+    </div>
+
+    <p class="material-count" aria-live="polite"><span data-material-count>5</span> materialer</p>
+
+    <div class="material-grid" data-material-grid>
+      <article class="material-card" data-material-item data-category="veggaviser" data-search="veggavis språkdag lærerark lærerveiledning pdf">
+        <a class="material-preview material-preview-page" href="ressurser/veggavis_spraakdag_laererark.pdf" download><img src="assets/preview-veggavis-laererark.png" alt="Forhåndsvisning av førstesiden i lærerarket" loading="lazy"></a>
+        <div class="material-card-body"><span>Veggavis · PDF</span><h3>Europeisk Språkdag 2026 – lærerark</h3><a href="ressurser/veggavis_spraakdag_laererark.pdf" download>Last ned <i aria-hidden="true">↓</i></a></div>
+      </article>
+      <article class="material-card" data-material-item data-category="veggaviser" data-search="veggavis språkdag elevark oppgaver elever pdf">
+        <a class="material-preview material-preview-page" href="ressurser/veggavis_spraakdag_elevark.pdf" download><img src="assets/preview-veggavis-elevark.png" alt="Forhåndsvisning av førstesiden i elevarket" loading="lazy"></a>
+        <div class="material-card-body"><span>Veggavis · PDF</span><h3>Europeisk Språkdag 2026 – elevark</h3><a href="ressurser/veggavis_spraakdag_elevark.pdf" download>Last ned <i aria-hidden="true">↓</i></a></div>
+      </article>
+      <article class="material-card" data-material-item data-category="flyer" data-search="kampanjeflyer kampanje flyer brosjyre pdf">
+        <a class="material-preview material-preview-page" href="ressurser/kampanjeflyer.pdf" download><img src="assets/preview-kampanjeflyer.png" alt="Forhåndsvisning av kampanjeflyeren" loading="lazy"></a>
+        <div class="material-card-body"><span>Kampanjeflyer · PDF</span><h3>Kampanjeflyer</h3><a href="ressurser/kampanjeflyer.pdf" download>Last ned <i aria-hidden="true">↓</i></a></div>
+      </article>
+      <article class="material-card" data-material-item data-category="qr-koder" data-search="qr kode kampanjeside png deling">
+        <a class="material-preview material-preview-contain" href="assets/qr-kampanjeside.png" download><img src="assets/qr-kampanjeside.png" alt="QR-kode til kampanjesiden" loading="lazy"></a>
+        <div class="material-card-body"><span>Delingsmateriell · PNG</span><h3>QR-kode til kampanjesiden</h3><a href="assets/qr-kampanjeside.png" download>Last ned <i aria-hidden="true">↓</i></a></div>
+      </article>
+      <article class="material-card" data-material-item data-category="qr-koder" data-search="qr kode kampanjeside svg vektor deling">
+        <a class="material-preview material-preview-contain" href="assets/qr-kampanjeside.svg" download><img src="assets/qr-kampanjeside.svg" alt="QR-kode til kampanjesiden i vektorformat" loading="lazy"></a>
+        <div class="material-card-body"><span>Delingsmateriell · SVG</span><h3>QR-kode i vektorformat</h3><a href="assets/qr-kampanjeside.svg" download>Last ned <i aria-hidden="true">↓</i></a></div>
+      </article>
+    </div>
+    <p class="material-empty" data-material-empty hidden>Ingen materialer passer med søket ditt.</p>
+  </section>
+</main>
+
+<footer><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><img src="assets/favicon.svg" alt=""></span><span>Redd Fremmedspråkene</span></a><p>En felles kampanje fra TYSKFORUM, ANPE og ANEF for en framtidsrettet språkopplæring.</p><div><a href="index.html">Forsiden</a><a href="#main-content">Til toppen ↑</a></div></footer>
+</body>
+</html>
