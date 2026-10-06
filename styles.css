@@ -245,84 +245,53 @@ h1 em,
   line-height:.88;
   letter-spacing:-.06em
 }
-.hero-language-day {
+.hero-tutorial {
   min-height:470px;
   overflow:hidden;
   display:flex;
-  align-items:stretch;
-  position:relative;
-  color:#fff;
-  background:linear-gradient(145deg,#5268c9,#3f51a8);
+  flex-direction:column;
+  background:#101525;
   border-radius:26px
 }
-.language-day-copy {
-  width:68%;
-  padding:40px 28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  position:relative;
-  z-index:2
+.hero-tutorial-heading {
+  padding:22px 26px 20px;
+  color:#fff;
+  background:linear-gradient(145deg,#5268c9,#4356ad)
 }
-.language-day-copy .poster-kicker {
-  max-width:390px;
-  color:#e4e8fb;
-  font-size:14px;
-  line-height:1.35
+.hero-tutorial-heading .section-label {
+  margin:0 0 8px;
+  color:#dfe4fa
 }
-.language-day-copy h2 {
-  max-width:260px;
+.hero-tutorial-heading h2 {
   margin:0;
-  font-size:clamp(44px,8vw,60px);
-  font-weight:760;
-  line-height:.9;
-  letter-spacing:-.055em
+  color:#fff;
+  font-size:clamp(26px,2.8vw,40px);
+  line-height:1;
+  letter-spacing:-.04em
 }
-.language-day-copy p {
-  max-width:350px;
-  margin:24px 0 26px;
-  color:#f2f3fb;
-  font-size:17px;
-  line-height:1.45
-}
-.language-day-actions {
+.hero-tutorial-credit {
+  margin:0;
+  padding:16px 22px 18px;
   display:flex;
   flex-wrap:wrap;
-  gap:9px
-}
-.language-day-actions a {
-  min-height:44px;
-  padding:0 16px;
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color:var(--ink);
+  gap:5px 16px;
+  color:var(--muted);
   background:#fff;
-  border-radius:999px;
-  font-size:14px;
-  font-weight:800;
-  transition:transform .2s,box-shadow .2s
+  border-top:1px solid var(--line);
+  font-size:12px;
+  line-height:1.45
 }
-.language-day-actions a:hover {
-  transform:translateY(-2px);
-  box-shadow:0 10px 22px rgba(12,20,54,.2)
+.hero-tutorial-credit strong {
+  width:100%;
+  color:var(--ink)
 }
-.language-day-preview {
-  width:56%;
-  max-width:none;
-  height:auto;
-  aspect-ratio:595/825;
-  position:absolute;
-  right:-18%;
-  bottom:-1%;
-  z-index:1;
-  object-fit:cover;
-  object-position:top center;
-  border:10px solid rgba(255,255,255,.96);
-  border-radius:12px;
-  box-shadow:0 18px 45px rgba(13,22,63,.28);
-  opacity:.42;
-  transform:rotate(2deg)
+.hero-tutorial video {
+  width:100%;
+  min-height:0;
+  flex:1;
+  display:block;
+  object-fit:contain;
+  background:#101525
 }
 .hero-image-slide {
   min-height:470px;
@@ -1222,22 +1191,6 @@ footer a:hover {
     flex-wrap:wrap
   }
 }
-@media(max-width:640px) {
-  .hero-language-day {
-    min-height:440px
-  }
-  .language-day-copy {
-    width:76%;
-    padding:34px 28px
-  }
-  .language-day-copy p {
-    max-width:none
-  }
-  .language-day-copy h2 {
-    font-size:clamp(44px,12vw,58px)
-  }
-}
-
 /* Video and audio */
 .media-showcase {
   max-width:1440px;
@@ -1252,6 +1205,10 @@ footer a:hover {
   grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);
   gap:22px;
   align-items:start
+}
+.media-grid-single {
+  grid-template-columns:minmax(0,760px);
+  justify-content:center
 }
 .media-feature,
 .media-secondary {
