@@ -1893,3 +1893,71 @@ footer a:hover {
     padding:19px
   }
 }
+
+/* Current consultations share the hero's existing responsive grid. */
+.consultation-cards { grid-area:carousel; display:grid; gap:18px; min-width:0; scroll-margin-top:110px; }
+.consultation-card { padding:26px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); }
+.consultation-card h2 { font-size:clamp(1.3rem,2.2vw,1.8rem); line-height:1.2; margin:10px 0; }
+.consultation-card p { line-height:1.6; }
+.consultation-card .button { white-space:normal; }
+.submission-guide { margin-top:32px; padding-top:28px; border-top:1px solid var(--line); }
+.submission-guide video { display:block; width:100%; height:auto; background:#101525; border-radius:16px 16px 0 0; }
+.submission-guide .hero-tutorial-credit { border-radius:0 0 16px 16px; }
+.response-tips { display:grid; gap:16px; margin:24px 0; }
+.response-tips article { padding:20px; border-left:4px solid var(--blue); background:var(--paper); border-radius:0 12px 12px 0; }
+.response-tips h4 { margin:0 0 10px; font-size:19px; line-height:1.35; }
+.response-tips p { margin:0; }
+
+/* Give the current call to action a clear visual lead. */
+.hero .hero-copy { padding:38px clamp(24px,3vw,44px); justify-content:center; align-items:flex-start; background:var(--ink); color:#fff; border-radius:var(--radius); }
+.hero .hero-copy h1 { font-size:clamp(48px,5.6vw,82px); line-height:1; letter-spacing:-.055em; }
+.hero .hero-copy h1 em { color:#f2ab99; }
+.campaign-deadline { display:flex; flex-wrap:wrap; gap:6px 14px; margin:0 0 28px; padding:10px 14px; border:1px solid #69718a; border-radius:12px; font-size:14px; line-height:1.5; }
+.campaign-deadline strong { color:#f2ab99; }
+.hero .hero-copy .lead { margin-top:24px; color:#e5e8f0; font-size:clamp(18px,1.5vw,21px); }
+.campaign-prompt { margin:24px 0 14px; font-size:20px; font-weight:750; }
+.campaign-tip-button { background:#f2ab99; border-color:#f2ab99; color:var(--ink); padding:12px 22px; }
+.campaign-tip-button:hover { background:#ffc5b6; }
+.campaign-signoff { margin:24px 0 0; color:#c0c7db; font-size:14px; }
+.hero .hero-actions { padding:0 0 10px; margin-top:20px; }
+@media(max-width:820px) {
+  .hero .hero-copy { padding:30px 24px; }
+  .hero .hero-actions { margin-top:0; }
+}
+/* Keep the deadline compact above the submission guide on all screen sizes. */
+#panel-innspill {
+  grid-template-columns:minmax(0,1fr);
+  gap:30px;
+}
+#panel-innspill .countdown-card {
+  min-height:0;
+  padding:18px 24px;
+  flex-direction:row;
+  flex-wrap:wrap;
+  gap:10px 16px;
+  justify-content:flex-start;
+  text-align:left;
+}
+#panel-innspill .countdown-card .section-label {
+  margin:0 auto 0 0;
+  line-height:1.5;
+  color:var(--ink);
+}
+#panel-innspill .countdown-card strong {
+  font-size:44px;
+  line-height:1;
+  letter-spacing:-.04em;
+}
+#panel-innspill .countdown-card>span {
+  margin:0;
+  font-size:14px;
+}
+#panel-innspill .panel-copy {
+  width:100%;
+  max-width:920px;
+  justify-self:center;
+  min-width:0;
+}
+@media(max-width:480px) {
+  #panel-innspill .countdown-card .section-label { flex-basis:100%; }
+}

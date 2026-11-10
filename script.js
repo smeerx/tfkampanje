@@ -1,4 +1,4 @@
-const deadline = new Date("2026-11-01T23:59:59+01:00").getTime();
+const deadline = new Date("2026-11-20T23:59:59+01:00").getTime();
 const countdown = document.querySelector("#countdown");
 
 function updateCountdown() {
